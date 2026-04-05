@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90年代風ブログサイトの作り方 - レトロブログ</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #00cc00;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #00cc00;
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            text-shadow: 0 0 8px #00cc00;
+            margin: 0;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        .blog-title {
+            font-size: 16px;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+        
+        .blog-title a {
+            color: #00cc00;
+            text-decoration: none;
+        }
+        
+        .blog-title a:hover {
+            text-shadow: 0 0 3px #00cc00;
+        }
+        
+        article {
+            margin-bottom: 30px;
+        }
+        
+        .article-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #00cc00;
+        }
+        
+        .article-title {
+            font-size: 24px;
+            color: #00ff00;
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px #00cc00;
+        }
+        
+        .article-meta {
+            font-size: 12px;
+            color: #009900;
+        }
+        
+        .article-content {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .article-content h2 {
+            font-size: 18px;
+            color: #00ff00;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 3px #00cc00;
+        }
+        
+        .article-content h3 {
+            font-size: 16px;
+            color: #00cc00;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        
+        .article-content p {
+            margin-bottom: 15px;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        
+        .article-content li {
+            margin-bottom: 5px;
+        }
+        
+        .article-content code {
+            background-color: rgba(0, 204, 0, 0.1);
+            padding: 2px 4px;
+            border: 1px solid #00cc00;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .article-content pre {
+            background-color: rgba(0, 204, 0, 0.05);
+            border: 1px solid #00cc00;
+            padding: 15px;
+            margin: 20px 0;
+            overflow-x: auto;
+            font-size: 12px;
+        }
+        
+        .article-content blockquote {
+            border-left: 3px solid #00cc00;
+            padding-left: 15px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #00aa00;
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #00cc00;
+        }
+        
+        .back-to-home a {
+            color: #00cc00;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #00cc00;
+            transition: all 0.3s;
+        }
+        
+        .back-to-home a:hover {
+            background-color: #00cc00;
+            color: #000000;
+            box-shadow: 0 0 8px #00cc00;
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #00cc00, 0 0 8px #00cc00;
+            }
+            to {
+                text-shadow: 0 0 8px #00cc00, 0 0 15px #00cc00;
+            }
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 20px;
+            background-color: #00cc00;
+            animation: blink 1s infinite;
+            margin-left: 5px;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid #00cc00;
+            color: #009900;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>レトロブログ<span class="cursor"></span></h1>
+            <div class="blog-title">
+                <a href="index.html">← ブログトップに戻る</a>
+            </div>
+        </header>
+        
+        <main>
+            <article>
+                <div class="article-header">
+                    <h2 class="article-title">90年代風ブログサイトの作り方</h2>
+                    <div class="article-meta">
+                        投稿日: 2026-04-06 | カテゴリー: Web開発
+                    </div>
+                </div>
+                
+                <div class="article-content">
+                    <p>こんにちは！今回はHTMLとCSSを使って、90年代風のブログサイトを作成する方法について紹介します。</p>
+                    
+                    <h2>なぜ90年代風デザイン？</h2>
+                    <p>90年代のWebデザインは、限られた技術の中で創造性を発揮した時代です。黒背景に緑文字、等幅フォント、そしてシンプルなアニメーション。これぞまさにハッカー映画に出てくるようなインターフェースです。</p>
+                    
+                    <h2>基本的なHTML構造</h2>
+                    <p>まずは基本的なHTML構造から始めましょう。</p>
+                    
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;レトロブログ&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;こんにちは&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    
+                    <h2>CSSで90年代風スタイルを適用</h2>
+                    <p>次にCSSでレトロな雰囲気を演出します。</p>
+                    
+                    <h3>背景と文字色</h3>
+                    <p>まずは黒背景に緑文字の基本設定：</p>
+                    
+                    <pre><code>body {
+    background-color: #000000;
+    color: #00cc00;
+    font-family: 'Courier New', monospace;
+}</code></pre>
+                    
+                    <h3>発光効果の追加</h3>
+                    <p>text-shadowプロパティで文字を発光させます：</p>
+                    
+                    <pre><code>h1 {
+    text-shadow: 0 0 10px #00cc00;
+}</code></pre>
+                    
+                    <h2>アニメーション効果</h2>
+                    <p>@keyframesを使って文字の点滅や発光のアニメーションを追加できます。</p>
+                    
+                    <pre><code>@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #00cc00;
+    }
+    to {
+        text-shadow: 0 0 15px #00cc00;
+    }
+}
+
+.glow {
+    animation: glow 2s ease-in-out infinite alternate;
+}</code></pre>
+                    
+                    <h2>まとめ</h2>
+                    <p>モダンな技術とレトロなデザインの融合は、新しい表現の可能性を広げてくれます。シンプルながらも印象的な90年代風デザイン、ぜひ試してみてください。</p>
+                    
+                    <blockquote>
+                        「シンプルであることは、複雑であることよりも難しい。」 - レオナルド・ダ・ヴィンチ
+                    </blockquote>
+                </div>
+            </article>
+        </main>
+        
+        <div class="back-to-home">
+            <a href="index.html">← ブログトップに戻る</a>
+        </div>
+        
+        <footer>
+            <p>© 2026 レトロブログ</p>
+        </footer>
+    </div>
+</body>
+</html>
