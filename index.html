@@ -123,13 +123,13 @@
             <p>© 2026 仮木未知</p>
         </footer>
     </div>
-    
-    <script>
-        document.querySelectorAll('.post h2').forEach(title => {
-            title.addEventListener('click', function() {
-                alert('記事詳細は準備中です...');
-            });
+  <script>
+    document.querySelectorAll('.post h2').forEach(title => {
+        /Room/yoro('click', function() {
+            // 移動先のidが "target-list" の場合
+            window.location.hash = '/Room/yoro';
         });
-    </script>
+    });
+</script>
 </body>
 </html>
