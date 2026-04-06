@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -10,115 +11,125 @@
             color: #00cc00;
             font-family: 'Courier New', monospace;
             margin: 0;
-            padding: 20px;
+            padding: 15px;
             line-height: 1.6;
         }
-        
+
         .container {
-            max-width: 600px;
+            max-width: 100%;
             margin: 0 auto;
+            padding: 0 10px;
         }
-        
+
         header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             border-bottom: 1px solid #00cc00;
             padding-bottom: 20px;
         }
-        
+
         h1 {
-            font-size: 28px;
+            font-size: clamp(20px, 5vw, 28px);
             text-shadow: 0 0 8px #00cc00;
             margin: 0;
             animation: glow 2s ease-in-out infinite alternate;
         }
-        
+
         .blog-title {
-            font-size: 16px;
-            margin-top: 10px;
+            font-size: clamp(14px, 3.5vw, 16px);
+            margin-top: 15px;
             opacity: 0.8;
         }
-        
+
         .blog-title a {
             color: #00cc00;
             text-decoration: none;
+            padding: 8px 12px;
+            border: 1px solid #00cc00;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
-        
+
         .blog-title a:hover {
             text-shadow: 0 0 3px #00cc00;
+            background-color: rgba(0, 204, 0, 0.1);
         }
-        
+
         article {
             margin-bottom: 30px;
         }
-        
+
         .article-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
             border-bottom: 1px solid #00cc00;
         }
-        
+
         .article-title {
-            font-size: 24px;
+            font-size: clamp(18px, 4.5vw, 24px);
             color: #00ff00;
             margin-bottom: 15px;
             text-shadow: 0 0 5px #00cc00;
         }
-        
+
         .article-meta {
-            font-size: 12px;
+            font-size: clamp(11px, 3vw, 12px);
             color: #009900;
         }
-        
+
         .article-content {
-            font-size: 14px;
+            font-size: clamp(14px, 3.5vw, 14px);
             line-height: 1.8;
+            text-align: left;
+            padding: 0;
+            margin: 0;
         }
-        
+
         .article-content h2 {
-            font-size: 18px;
+            font-size: clamp(16px, 4vw, 18px);
             color: #00ff00;
             margin-top: 30px;
             margin-bottom: 15px;
             text-shadow: 0 0 3px #00cc00;
         }
-        
+
         .article-content h3 {
-            font-size: 16px;
+            font-size: clamp(14px, 3.5vw, 16px);
             color: #00cc00;
             margin-top: 25px;
             margin-bottom: 10px;
         }
-        
+
         .article-content p {
             margin-bottom: 15px;
         }
-        
+
         .article-content ul, .article-content ol {
             margin-bottom: 15px;
             padding-left: 20px;
         }
-        
+
         .article-content li {
             margin-bottom: 5px;
         }
-        
+
         .article-content code {
             background-color: rgba(0, 204, 0, 0.1);
             padding: 2px 4px;
             border: 1px solid #00cc00;
             font-family: 'Courier New', monospace;
         }
-        
+
         .article-content pre {
             background-color: rgba(0, 204, 0, 0.05);
             border: 1px solid #00cc00;
             padding: 15px;
             margin: 20px 0;
             overflow-x: auto;
-            font-size: 12px;
+            font-size: clamp(11px, 3vw, 12px);
         }
-        
+
         .article-content blockquote {
             border-left: 3px solid #00cc00;
             padding-left: 15px;
@@ -126,28 +137,40 @@
             font-style: italic;
             color: #00aa00;
         }
-        
+
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border: 1px solid #00cc00;
+            border-radius: 3px;
+        }
+
         .back-to-home {
             text-align: center;
             margin-top: 40px;
             padding-top: 20px;
             border-top: 1px solid #00cc00;
         }
-        
+
         .back-to-home a {
             color: #00cc00;
             text-decoration: none;
-            padding: 8px 16px;
+            padding: 12px 20px;
             border: 1px solid #00cc00;
+            border-radius: 5px;
             transition: all 0.3s;
+            display: inline-block;
+            font-size: clamp(12px, 3vw, 14px);
         }
-        
+
         .back-to-home a:hover {
             background-color: #00cc00;
             color: #000000;
             box-shadow: 0 0 8px #00cc00;
         }
-        
+
         @keyframes glow {
             from {
                 text-shadow: 0 0 5px #00cc00, 0 0 8px #00cc00;
@@ -156,7 +179,7 @@
                 text-shadow: 0 0 8px #00cc00, 0 0 15px #00cc00;
             }
         }
-        
+
         .cursor {
             display: inline-block;
             width: 8px;
@@ -165,19 +188,78 @@
             animation: blink 1s infinite;
             margin-left: 5px;
         }
-        
+
         @keyframes blink {
             0%, 50% { opacity: 1; }
             51%, 100% { opacity: 0; }
         }
-        
+
         footer {
             text-align: center;
             margin-top: 40px;
             padding-top: 15px;
             border-top: 1px solid #00cc00;
             color: #009900;
-            font-size: 12px;
+            font-size: clamp(11px, 3vw, 12px);
+        }
+
+        /* スマホ向けの最適化 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 0 5px;
+            }
+            
+            header {
+                margin-bottom: 25px;
+                padding-bottom: 15px;
+            }
+            
+            .article-header {
+                margin-bottom: 25px;
+                padding-bottom: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 8px;
+            }
+            
+            .container {
+                padding: 0 3px;
+            }
+            
+            header {
+                margin-bottom: 20px;
+                padding-bottom: 12px;
+            }
+            
+            .article-header {
+                margin-bottom: 20px;
+                padding-bottom: 12px;
+            }
+            
+            .article-content img {
+                margin: 10px auto;
+            }
+        }
+        
+        /* タッチデバイス向けの最適化 */
+        @media (hover: none) and (pointer: coarse) {
+            .blog-title a:active {
+                background-color: rgba(0, 204, 0, 0.2);
+                transform: scale(0.95);
+            }
+            
+            .back-to-home a:active {
+                background-color: #00cc00;
+                color: #000000;
+                transform: scale(0.95);
+            }
         }
     </style>
 </head>
@@ -189,7 +271,7 @@
                 <a href="index.html">← ブログトップに戻る</a>
             </div>
         </header>
-        
+
         <main>
             <article>
                 <div class="article-header">
@@ -198,26 +280,25 @@
                         投稿日: 2026-04-06 
                     </div>
                 </div>
-                
-　　　　　　　　<div class="article-content" style="text-align: left; padding: 0; margin: 0;">
-    この前友人と某古本屋さんに行った時、こんな物を買いました。<br>
-            <img src="yandere.jpeg" alt="画像" style="max-width: 70%;"> <br>
-    このCDは某動画配信サイトで2000年代の後半に流行ったものです。<br>
-    どんなCDなのかと言うとヤンデレな女の子に主人公がひどい目に合わされると言う物です。<br>
-    女の子は  <strong style="font-size: 1.8em;">妹、クラスメイト、クラスメイト2</strong>の3人です。<br>
-    深夜に部屋の明かりを消して聞いて見ましたがどの女の子も主人公を拘束したり…していて恐ろしかったです。（主人公可哀想）<br>
-    でその時春休みで何かしらクリエイティブなことをしたかったのでヤンデレが出てくるドラマCDでも作るか！となりました。<br>
-    
-    <br>
-    <strong style="font-size: 1.8em;">で完成したのがこちら</strong>
-</div>
-</div>
-　　　　　</div>
-        
+
+                <div class="article-content">
+                    <p>この前友人と某古本屋さんに行った時、こんな物を買いました。</p>
+                    <img src="yandere.jpeg" alt="画像" style="max-width: 70%;"> <br>
+                    <p>このCDは某動画配信サイトで2000年代の後半に流行ったものです。</p>
+                    <p>どんなCDなのかと言うとヤンデレな女の子に主人公がひどい目に合わされると言う物です。</p>
+                    <p>女の子は  <strong style="font-size: 1.8em;">妹、クラスメイト、クラスメイト2</strong>の3人です。</p>
+                    <p>深夜に部屋の明かりを消して聞いて見ましたがどの女の子も主人公を拘束したり…していて恐ろしかったです。（主人公可哀想）</p>
+                    <p>でその時春休みで何かしらクリエイティブなことをしたかったのでヤンデレが出てくるドラマCDでも作るか！となりました。</p>
+                    <br>
+                    <strong style="font-size: 1.8em;">で完成したのがこちら</strong>
+                </div>
+            </article>
+        </div>
+
         <div class="back-to-home">
             <a href="index.html">← ブログトップに戻る</a>
         </div>
-        
+
         <footer>
             <p>© 2026 未知の部屋</p>
         </footer>
